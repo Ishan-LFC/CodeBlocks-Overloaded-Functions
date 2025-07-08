@@ -1,0 +1,46 @@
+#include<iostream>  
+#include <iomanip>  
+using namespace std;   
+ 
+float calcWeeklyPay(float Salary)  
+ {  
+    return Salary/52;  
+ }
+
+ float calcWeeklyPay(float pay_Rate, float hours_Worked)  
+ {  
+    return pay_Rate * hours_Worked;  
+ }  
+  
+ int main()  
+ {  
+    float hours,  // variable for hours worked  
+       pay,  // variable for pay received  
+       salary;  // variable for computed salary  
+  
+    // Get the hours worked. (MS) 
+    cout << "How many hours were worked? (0 if salaried employee) ";  
+    cin >> hours;  
+    if (hours == 0) 
+    { 
+       cout << "Please enter yearly salary R";  
+       cin >> pay;  
+    } 
+    else  
+    { 
+       cout << "Please enter pay rate R";  
+       cin >> pay;  
+    } 
+
+   
+ } 
+// Determine pay  
+if (hours == 0)  
+salary = calcWeeklyPay(pay);  
+else  
+salary = calcWeeklyPay(pay,hours);  
+// Display final salary  
+cout << fixed << showpoint << setprecision(2)  
+<< "The weekly salary is R" << salary << endl;  
+return 0; 
+}
